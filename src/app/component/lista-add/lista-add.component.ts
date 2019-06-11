@@ -8,9 +8,33 @@ import { ConexionService } from 'src/app/services/conexion.service';
 })
 export class ListaAddComponent implements OnInit {
 
+  item:any = {
+    name:'',
+    modAdministracion:'',
+    mecAccion:'',
+    contraindicaciones:'',
+    advertenciaPrecuaciones:'',
+    cantidad:0
+  }
+
   constructor(private servicio:ConexionService) { }
 
   ngOnInit() {
+  }
+
+  agregar(){
+    this.servicio.agregarItem(this.item);
+    this.item.name = '';
+    //this.servicio.agregarItem(this.item.modAdministracion);
+    this.item.modAdministracion = '';
+    //this.servicio.agregarItem(this.item.contraindicaciones);
+    this.item.contraindicaciones = '';
+    //this.servicio.agregarItem(this.item.advertenciaPrecuaciones);
+    this.item.advertenciaPrecauciones = '';
+    //this.servicio.agregarItem(this.item.mecAccion);
+    this.item.mecAccion = '';
+    //this.servicio.agregarItem(this.item.cantidad);
+    this.item.cantidad = 0;    
   }
 
 }
