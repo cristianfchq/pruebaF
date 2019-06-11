@@ -9,8 +9,24 @@
 <div class="card border-primary mb-3" style="max-width: 33rem;" *ngFor="let item of items">
   <div class="card-header">{{item.name}}</div>
   <div class="card-body text-primary">
-    <h5 class="card-title">Primary card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">{{item.name}}</h5>
+    <h5 class="card-title">Mecanismo de accion</h5>
+    <p class="card-text">{{item.mecAccion}}
+      <li class="list-group-item d-flex justify-content-between align-items-center mt-3">
+        Cantidad
+        <span class="badge badge-primary badge-pill">{{item.cantidad}}</span>
+      </li>
+    </p>
+    
+    
+
+    <h6>
+      <p>
+        <a href="#" class="card-link">Ver mas ...</a>
+      </p>
+    </h6>
+    
+    
     <button type="button" class="btn btn-success">Modificar</button>
     <button type="button" class="btn btn-danger">Eliminar</button>
   </div>
