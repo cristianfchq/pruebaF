@@ -1,13 +1,25 @@
-<div class="container">
+<!--
+  <div class="container">
   <i class="fas fa-car"></i> 
   <i class="fas fa-car" style="font-size:48px;"></i> 
   <i class="fas fa-car" style="font-size:60px;color:red;"></i> 
 </div>
+-->
+
 
 <div class="container mt-5">
-  <ul>
+  <div class="row">
+    <div class="col-md-6">
+      <app-lista></app-lista>
+    </div>
+    <div class="col-md-6">
+      <app-lista-add></app-lista-add>
+    </div>
+  </div>
+</div>
+
+<ul>
     <li class="text" *ngFor="let item of items | async">
       {{item.name}}
     </li>
   </ul>
-</div>

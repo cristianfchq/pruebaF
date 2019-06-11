@@ -12,10 +12,14 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { ConexionService } from './services/conexion.service'
 import { from } from 'rxjs';
+import { ListaComponent } from './component/lista/lista.component';
+import { ListaAddComponent } from './component/lista-add/lista-add.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaComponent,
+    ListaAddComponent
   ],
   imports: [
     BrowserModule,
