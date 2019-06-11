@@ -1,4 +1,17 @@
-
-<div class="alert alert-warning" role="alert" *ngFor="let item of items">
+<!--
+  <div class="alert alert-warning" role="alert" *ngFor="let item of items">
   {{item.name}} - {{item.id}}
+  </div>
+-->
+
+
+
+<div class="card border-primary mb-3" style="max-width: 33rem;" *ngFor="let item of items">
+  <div class="card-header">{{item.name}}</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Primary card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button type="button" class="btn btn-success">Modificar</button>
+    <button type="button" class="btn btn-danger">Eliminar</button>
+  </div>
 </div>
