@@ -10,11 +10,17 @@
   <div class="card-header">{{item.name}}</div>
   <div class="card-body text-primary">
     <h5 class="card-title">{{item.name}}</h5>
-    <h5 class="card-title">Mecanismo de accion</h5>
+    <h4 class="card-title">Mecanismo de accion</h4>
     <p class="card-text">{{item.mecAccion}}
+      
       <li class="list-group-item d-flex justify-content-between align-items-center mt-3">
         Cantidad
-        <span class="badge badge-primary badge-pill">{{item.cantidad}}</span>
+        <span class="badge badge-danger">
+          <h5>
+              {{item.cantidad}}
+          </h5>
+          
+        </span>
       </li>
     </p>
     
