@@ -21,7 +21,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
-  ],
   providers: [],
   bootstrap: [AppComponent]
 })
