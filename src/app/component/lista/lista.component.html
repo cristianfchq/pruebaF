@@ -32,11 +32,161 @@
       </p>
     </h6>
     
-    <div class="" (click)="eliminar(item)">
-      <button type="button" class="btn btn-danger float-right mr-1">Eliminar</button>
-    </div>
-    <div class="" (click)="modificar(item)">
-        <button type="button" class="btn btn-success float-right mr-3">Modificar</button>
+    
+      <button type="button" class="btn btn-danger float-right mr-1" (click)="eliminar(item)">
+        <div class="float-left mr-3" (click)="eliminar(item)">
+          <i class="fas fa-trash-alt" aria-hidden="true"></i>
+        </div>
+        Eliminar
+      </button>
+    
+      <button type="button" class="btn btn-success float-right mr-3" (click)="editar(item)" data-toggle="modal" data-target="#exampleModalLong">
+        <div class="float-left mr-3" (click)="editar(item)" data-toggle="modal" data-target="#exampleModalLong">
+          <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+        </div>
+        Modificar
+      </button>
+    
+  </div>
+
+
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">{{editarItem.name}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+
+            <form (ngSubmit)="agregarItemEditado()">
+                <div
+                  class="alert alert-warning" 
+                  role="alert">
+                  
+                  <label for="formGroupExampleInput">
+                      Nombre Medicamento
+                  </label>
+                
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="formGroupExampleInput" 
+                    placeholder="Nombre Medicamento" 
+                    name="name"
+                    [(ngModel)]="editarItem.name"
+                  >
+                </div>
+            
+                <div 
+                  class="alert alert-warning" 
+                  role="alert">
+                  
+                  <label for="exampleFormControlTextarea1">
+                      Mecanismo de Accion
+                  </label>
+                  
+                  <textarea 
+                    class="form-control" 
+                    id="exampleFormControlTextarea1" 
+                    rows="3" 
+                    name="mecAccion"
+                    [(ngModel)]="editarItem.mecAccion"
+                  >
+                  </textarea>
+                </div>
+            
+                <div 
+                  class="alert alert-warning" 
+                  role="alert">
+                  
+                  <label for="exampleFormControlTextarea1">
+                      Modo de Administracion
+                  </label>
+                  
+                  <textarea 
+                    class="form-control" 
+                    id="exampleFormControlTextarea1" 
+                    rows="3" 
+                    name="modAdministracion"
+                    [(ngModel)]="editarItem.modAdministracion"  
+                  >
+                  </textarea>
+                </div>
+            
+                <div 
+                  class="alert alert-warning" 
+                  role="alert">
+                  <label for="exampleFormControlTextarea1">
+                      Contraindicaciones
+                  </label>
+                  
+                  <textarea 
+                    class="form-control" 
+                    id="exampleFormControlTextarea1" 
+                    rows="3" 
+                    name="contraindicaciones"
+                    [(ngModel)]="editarItem.contraindicaciones"
+                  >
+                  </textarea>
+                </div>
+            
+                <div 
+                  class="alert alert-warning" 
+                  role="alert">
+                  <label for="exampleFormControlTextarea1">
+                      Advertencia y Precauciones
+                  </label>
+                  
+                  <textarea 
+                    class="form-control" 
+                    id="exampleFormControlTextarea1" 
+                    rows="3" 
+                    name="advertenciaPrecauciones"
+                    [(ngModel)]="editarItem.advertenciaPrecauciones"  
+                  >
+                  </textarea>
+                </div>
+            
+                <div 
+                  class="alert alert-warning" 
+                  role="alert">
+            
+                  <label for="formGroupExampleInput2">
+                      Cantidad
+                  </label>
+                  
+                  <input 
+                    type="number" 
+                    class="form-control" 
+                    id="formGroupExampleInput2" 
+                    placeholder="0" 
+                    name="cantidad"
+                    [(ngModel)]="editarItem.cantidad"
+                  >
+                </div>
+                
+                
+                <button class="btn btn-warning mt-3" type="submit">
+                  <i class="fas fa-save" aria-hidden="true"></i>
+                  Guardar Cambios
+                </button>
+                
+              </form>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
     </div>
   </div>
 </div>
