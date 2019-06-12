@@ -32,8 +32,11 @@
       </p>
     </h6>
     
-    
-    <button type="button" class="btn btn-success">Modificar</button>
-    <button type="button" class="btn btn-danger">Eliminar</button>
+    <div class="" (click)="eliminar(item)">
+      <button type="button" class="btn btn-danger float-right mr-1">Eliminar</button>
+    </div>
+    <div class="" (click)="modificar(item)">
+        <button type="button" class="btn btn-success float-right mr-3">Modificar</button>
+    </div>
   </div>
 </div>
