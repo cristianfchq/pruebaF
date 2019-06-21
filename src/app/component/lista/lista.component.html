@@ -31,14 +31,19 @@
         <a href="#" class="card-link">Ver mas ...</a>
       </p>
     </h6>
-    
-    
+      <!--
+        <input type="button" class="btn btn-success" data-toggle="modal" value="Editar" data-target="#exampleModalLong" (click)="editar(item)" />
+      -->
+      
+
       <button type="button" class="btn btn-danger float-right mr-1" (click)="eliminar(item)">
         <div class="float-left mr-3" (click)="eliminar(item)">
           <i class="fas fa-trash-alt" aria-hidden="true"></i>
         </div>
         Eliminar
       </button>
+
+
     
       <button type="button" class="btn btn-success float-right mr-3" (click)="editar(item)" data-toggle="modal" data-target="#exampleModalLong">
         <div class="float-left mr-3" (click)="editar(item)" data-toggle="modal" data-target="#exampleModalLong">
@@ -172,20 +177,31 @@
                   >
                 </div>
                 
-                
-                <button class="btn btn-warning mt-3" type="submit">
+                <input type="button" class="btn btn-success" value="Guardar" (click)="agregarItemEditado()" data-dismiss="modal"/>
+                <!--
+                  <button class="btn btn-warning mt-3" type="submit">
                   <i class="fas fa-save" aria-hidden="true"></i>
                   Guardar Cambios
-                </button>
+                  </button>
+                -->
+                
                 
               </form>
 
 
         </div>
-        <div class="modal-footer">
+        <!--
+          <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
+        -->
         
+        <!--
+          <input type="button" class="btn btn-success" data-toggle="modal" value="Upload" data-target="#myModal" />
+
+          O Un type directamente a su etiqueta Button
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Upload</button>
+        -->
       </div>
     </div>
   </div>

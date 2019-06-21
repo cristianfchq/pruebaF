@@ -13,7 +13,7 @@ export class ListaAddComponent implements OnInit {
     modAdministracion:'',
     mecAccion:'',
     contraindicaciones:'',
-    advertenciaPrecuaciones:'',
+    advertenciaPrecauciones:'',
     cantidad:0
   }
 
@@ -29,7 +29,7 @@ export class ListaAddComponent implements OnInit {
     this.item.modAdministracion = '';
     //this.servicio.agregarItem(this.item.contraindicaciones);
     this.item.contraindicaciones = '';
-    //this.servicio.agregarItem(this.item.advertenciaPrecuaciones);
+    //this.servicio.agregarItem(this.item.advertenciaPrecauciones);
     this.item.advertenciaPrecauciones = '';
     //this.servicio.agregarItem(this.item.mecAccion);
     this.item.mecAccion = '';
