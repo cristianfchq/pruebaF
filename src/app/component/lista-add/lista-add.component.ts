@@ -14,6 +14,7 @@ export class ListaAddComponent implements OnInit {
     mecAccion:'',
     contraindicaciones:'',
     advertenciaPrecauciones:'',
+    precio:'',
     cantidad:0
   }
 
@@ -33,6 +34,7 @@ export class ListaAddComponent implements OnInit {
     this.item.advertenciaPrecauciones = '';
     //this.servicio.agregarItem(this.item.mecAccion);
     this.item.mecAccion = '';
+    this.item.precio = '';
     //this.servicio.agregarItem(this.item.cantidad);
     this.item.cantidad = 0;    
   }

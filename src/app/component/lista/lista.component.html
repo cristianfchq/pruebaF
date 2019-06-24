@@ -7,12 +7,22 @@
 
 
 <div class="card border-primary mb-3" style="max-width: 33rem;" *ngFor="let item of items">
-  <div class="card-header">{{item.name}}</div>
+  <div class="card-header">12{{item.name}}</div>
   <div class="card-body text-primary">
     <h5 class="card-title">{{item.name}}</h5>
     <h4 class="card-title">Mecanismo de accion</h4>
     <p class="card-text">{{item.mecAccion}}
       
+      <li class="list-group-item d-flex justify-content-between align-items-center mt-3">
+        Precio
+        <span class="badge badge-warning">
+          <h5>
+              Bs {{item.precio}}
+          </h5>
+          
+        </span>
+      </li>
+
       <li class="list-group-item d-flex justify-content-between align-items-center mt-3">
         Cantidad
         <span class="badge badge-danger">
@@ -157,6 +167,24 @@
                     [(ngModel)]="editarItem.advertenciaPrecauciones"  
                   >
                   </textarea>
+                </div>
+
+                <div 
+                  class="alert alert-warning" 
+                  role="alert">
+            
+                  <label for="formGroupExampleInput2">
+                      Precio
+                  </label>
+                  
+                  <input 
+                    type="number" 
+                    class="form-control" 
+                    id="formGroupExampleInput2" 
+                    placeholder="0" 
+                    name="precio"
+                    [(ngModel)]="editarItem.precio"
+                  >
                 </div>
             
                 <div 

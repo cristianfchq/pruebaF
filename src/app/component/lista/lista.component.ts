@@ -15,6 +15,7 @@ export class ListaComponent implements OnInit {
     mecAccion:'',
     contraindicaciones:'',
     advertenciaPrecuaciones:'',
+    precio:'',
     cantidad:0
   }
 
